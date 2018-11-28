@@ -7,11 +7,11 @@
 
 body {
   @include background;
-  background: $primary-color;
+  background-color: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   line-height: 1.5;
 }
 
@@ -27,14 +27,20 @@ h3 {
   }
 
   &.sm-heading {
+    font-size: 2rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($secondary-color, 1), 0.75);
+  }
+  &.md-heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
   }
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -42,6 +48,10 @@ header {
   position: fixed;
   z-index: 2;
   width: 100%;
+}
+
+.text-primary {
+  color: white;
 }
 
 .text-secondary {
@@ -60,7 +70,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $primary-color;
         @include easeOut();
       }
     }
@@ -91,7 +101,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .job-1 {
@@ -107,28 +117,34 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: lighten($secondary-color, 5);
     padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+    border: $secondary-color 10px solid;
   }
 }
 
 // Work/Projects
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
-    border: 3px #fff solid;
+    border: 3px black solid;
 
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
+      visibility: visible;
     }
   }
+}
+.item1 {
+  width: 100%;
+  display: block;
+  align-items: center;
 }
 
 // Contact Page
@@ -184,8 +200,8 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
+  background: darken($secondary-color, 10);
+  color: set-text-color($secondary-color);
   height: 60px;
 }
 

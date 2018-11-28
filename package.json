@@ -9,7 +9,9 @@
   "author": "Michael Loiseau",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.10.0"
+    "node": "^11.1.0",
+    "node-sass": "^4.10.0",
+    "sass": "^1.15.1"
   },
   "devDependencies": {}
 }
