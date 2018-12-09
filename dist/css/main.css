@@ -191,27 +191,59 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #f3d342;
+    background: #7f848b;
     padding: 0.5rem;
     border: #f1cd2a 10px solid; }
+
+.container {
+  display: block;
+  border: 20px black;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5rem; }
+
+img {
+  max-width: 100%; }
 
 .projects {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 10fr); }
   .projects img {
     width: 100%;
-    border: 3px black solid; }
+    border: 20px black solid; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #f1cd2a;
       transition: all 0.5s ease-out;
       visibility: visible; }
+  .projects .overlay {
+    position: absolute;
+    transition: all 0.3 ease;
+    opacity: 0;
+    background: #72777e; }
 
-.item1 {
-  width: 100%;
-  display: block;
-  align-items: center; }
+.project {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 10fr); }
+  .project img {
+    width: 100%;
+    border: 3px black solid; }
+    .project img:hover {
+      opacity: 0.5;
+      border-color: #f1cd2a;
+      transition: all 0.5s ease-out;
+      visibility: visible; }
+  .project .overlay {
+    position: absolute;
+    transition: all 0.3 ease;
+    opacity: 0;
+    background: #f1cd2a; }
 
 .boxes {
   display: flex;
